@@ -37,7 +37,7 @@
 - belongs_to :user
 - has_many :purchase_records
 
-## purchase_records
+## purchase_record
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
