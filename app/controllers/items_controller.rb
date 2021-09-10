@@ -29,6 +29,7 @@ class ItemsController < ApplicationController
       redirect_to item_path
     else
       render :edit
+    end
   end
 
   private
