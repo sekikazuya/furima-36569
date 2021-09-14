@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :purchas_record do
+  factory :address do
     
   end
 end

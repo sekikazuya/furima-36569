@@ -7,6 +7,7 @@ class Item < ApplicationRecord
   belongs_to :delivery_time
   belongs_to :user
   has_one_attached :image
+  belongs_to :order
 
   with_options presence: true do
     validates :name, :introduction
