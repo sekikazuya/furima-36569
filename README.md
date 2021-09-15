@@ -16,7 +16,7 @@
 ### Association
 
 - has_many :items
-- has_many :purchase_records
+- has_many :order
 
 ## itemsテーブル
 
@@ -35,9 +35,9 @@
 ### Association
 
 - belongs_to :user
-- has_many :purchase_records
+- has_one :order
 
-## purchase_records
+## ordersテーブル
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
@@ -48,20 +48,20 @@
 
 - belongs_to :user
 - belongs_to :item
-- has_one :order
+- has_one :address
 
-## ordersテーブル
+## addressテーブル
 
 | Column             | Type       | Options                                   |
 | ------------------ | ---------- | ----------------------------------------- |
 | postal_code        | string     | null: false, 「3桁ハイフン4桁」半角文字列のみ) |
 | prefecture_id      | integer    | null: false                               |
-| municipality       | string     | null: false                               |
+| city               | string     | null: false                               |
 | house_number       | string     | null: false                               |
 | building_name      | string     |                                           |
 | phone_number       | string     | null: false                               |
-| purchase_record    | references | null: false, foreign_key: true            |
+| order              | references | null: false, foreign_key: true            |
 
 ### Association
 
-- belongs_to :purchase_record
+- belongs_to :order
